@@ -1,6 +1,8 @@
 Todos.Router.map(function() {
   this.resource('todos', { path: '/' }, function(){
-    //additional child routes go here later
+//trial code begins here//
+    this.resource('todo', { path: '/:id'});
+//trial code ends here//
     this.route('active');
     this.route('completed');
   });

@@ -29,8 +29,12 @@
         {{input type="text" id="new-todo" placeholder="What needs to be done?"
           value=newTitle action="createTodo"}}
       </header>
-
       <section id="main">
+      <!--Trial code begins here-->
+          {{#each 'todos'}}
+            {{id}}
+          {{/each}}
+      <!--Trial code ends here-->
         {{outlet}}
         {{input type="checkbox" id="toggle-all" checked=allAreDone}}
       </section>
@@ -56,6 +60,7 @@
         </button>
       {{/if}}
       </footer>
+
     </section>
 
     <footer id="info">
